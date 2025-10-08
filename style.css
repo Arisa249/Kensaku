@@ -1,0 +1,96 @@
+/* カメラ画面 */
+#camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+#camera {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#capture {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  background: #ff3366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+#capture:active {
+  opacity: 1;
+}
+
+/* プレビュー全画面表示 */
+#preview-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* プレビュー画像を縦横比維持で中央表示 */
+#preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain; /* 画像の比率を崩さず表示 */
+}
+
+/* 撮り直しボタン */
+#retake {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  background: #ff3366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 1001;
+}
+#retake:active {
+  opacity: 1;
+}
+
+/* 長押し保存用文字 */
+#save-text {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #fff;
+  z-index: 1001;
+}

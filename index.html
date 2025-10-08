@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ARフォトフレーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="camera-container">
+    <video id="camera" autoplay playsinline></video>
+    <img id="frame" src="frame.png" />
+    <button id="capture">撮影</button>
+  </div>
+
+  <div id="preview-container">
+    <img id="preview" />
+    <button id="retake">撮り直し</button>
+    <div id="save-text">画像を長押しで保存</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
